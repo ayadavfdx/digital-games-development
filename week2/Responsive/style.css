@@ -1,0 +1,129 @@
+/* ═══════════════════════════════════════════════════════
+   Exercício 3 — Painel de Estatísticas (Media Queries)
+   O reset e o estilo do conteúdo dos cards já estão feitos.
+   A tua tarefa começa mais abaixo, na secção "A TUA TAREFA".
+   a91403
+   Fernando Dávila
+   ═══════════════════════════════════════════════════════ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #1E293B;
+  background: #F8FAFC;
+}
+
+main {
+  max-width: 700px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+main p {
+  margin-bottom: 0.8rem;
+}
+
+main ul {
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+
+main li {
+  margin-bottom: 0.3rem;
+}
+
+main code {
+  background: #DBEAFE;
+  color: #2E75B6;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.hint {
+  background: #F0FDF4;
+  border-left: 4px solid #16A34A;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin-top: 1.2rem;
+  font-size: 0.92rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  text-align: center;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.card-value {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #1F3864;
+}
+
+.card-label {
+  font-size: 0.85rem;
+  color: #64748B;
+  margin-top: 0.2rem;
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   A TUA TAREFA — completa as regras abaixo
+   ═══════════════════════════════════════════════════════ */
+
+main h1 {
+  color: #1F3864;
+  margin-bottom: 1rem;
+
+  /* TODO 1 — tamanho de letra responsivo, sem nenhuma media
+     query (dica: font-size: clamp(mínimo, ideal-em-vw, máximo);
+     sugestão: clamp(1.5rem, 5vw, 2.5rem)) */
+     font-size: clamp(1.5rem, 5vw, 2.5rem);
+
+}
+
+.stats {
+  /* TODO 2 — ativa o CSS Grid neste contentor */
+    display: grid;
+
+  /* TODO 3 — 1 coluna por defeito, para o mobile — é o
+     ponto de partida "mobile-first"
+     (dica: grid-template-columns: 1fr;) */
+    grid-template-columns: 1fr;
+  /* TODO 4 — espaço entre os cards
+     (sugestão: gap: 1.2rem;) */
+    gap: 1.2rem;
+  /* TODO 5 — espaço por cima e por baixo do painel
+     (sugestão: padding: 1.5rem 0;) */
+    padding: 1.5rem 0;
+}
+
+/* TODO 6 — tablet: a partir de 640px de largura, 2 colunas
+   (dica: @media (min-width: 640px) { .stats { ... } }) */
+  @media (min-width: 640px) {
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+/* TODO 7 — desktop: a partir de 1024px de largura, 3 colunas
+   (dica: @media (min-width: 1024px) { .stats { ... } }) */
+  @media (min-width: 1024px) {
+    .stats {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
