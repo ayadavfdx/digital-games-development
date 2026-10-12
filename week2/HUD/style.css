@@ -1,0 +1,115 @@
+/* ═══════════════════════════════════════════════════════
+   Desafio 4 — HUD de Jogo (Flexbox)
+   O reset e o estilo do conteúdo já estão feitos.
+   A tua tarefa começa mais abaixo, na secção "A TUA TAREFA".
+   a91403
+   Fernando Davila
+   ═══════════════════════════════════════════════════════ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #1E293B;
+  background: #F8FAFC;
+}
+
+main {
+  max-width: 700px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+main h1 {
+  color: #1F3864;
+  margin-bottom: 1rem;
+}
+
+main p {
+  margin-bottom: 0.8rem;
+}
+
+main ul {
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+
+main li {
+  margin-bottom: 0.3rem;
+}
+
+main code {
+  background: #DBEAFE;
+  color: #2E75B6;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.hint {
+  background: #F0FDF4;
+  border-left: 4px solid #16A34A;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin-top: 1.2rem;
+  font-size: 0.92rem;
+}
+
+.jogo {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+.hud-grupo {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.canvas-placeholder {
+  background: #0F172A;
+  color: #64748B;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   A TUA TAREFA — completa a regra abaixo
+   ═══════════════════════════════════════════════════════ */
+
+.hud {
+  /* TODO 1 — ativa o Flexbox neste contentor, para colocar
+     os três grupos (vidas, pontuação, tempo) lado a lado */
+  display: flex;
+  /* TODO 2 — vidas à esquerda e tempo à direita, com o
+     espaço vazio distribuído entre os três grupos
+     (dica: justify-content) */
+  justify-content: space-between;
+  /* TODO 3 — os três grupos alinhados ao centro na vertical
+     (dica: align-items: center;) */
+  align-items: center;
+  /* TODO 4 — espaço interno entre o conteúdo e as bordas
+     do HUD (sugestão: padding: 0.5rem 1rem;) */
+  padding: 0.5rem 1rem;
+  /* TODO 5 — fundo escuro semitransparente, para se
+     sobrepor ao jogo sem o esconder por completo
+     (dica: background: rgba(0, 0, 0, valor-entre-0-e-1);
+     sugestão: rgba(0, 0, 0, 0.8)) */
+  background: rgba(0, 0, 0, 0.7);
+  /* TODO 6 — cor do texto: branco, para se destacar do
+     fundo escuro */
+  color: #FFFFFF;
+} 
