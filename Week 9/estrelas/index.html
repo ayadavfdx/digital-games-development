@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Chuva de Estrelas</title>
+  <style>
+    body {
+      margin: 0;                  /* tira a margem de 8px que o browser põe */
+      background: #020617;        /* cor à volta do jogo (qualquer uma serve) */
+      display: flex;              /* o body passa a ser um contentor flexbox */
+      justify-content: center;    /* centra o jogo na horizontal */
+      align-items: center;        /* centra o jogo na vertical */
+      height: 100vh;              /* o body ocupa a altura toda da janela */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1.º o Phaser (CDN), 2.º o nosso jogo -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+  <script src="game.js"></script>
+
+</body>
+</html>

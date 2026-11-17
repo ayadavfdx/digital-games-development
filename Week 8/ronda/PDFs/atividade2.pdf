@@ -1,0 +1,122 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 3258 >>
+stream
+BT
+/F2 13 Tf 1 0 0 1 40 802 Tm (HTML) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (<!DOCTYPE html>) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (<html lang="pt">) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (<head>) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (    <meta charset="UTF-8">) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (    <meta name="viewport" content="width=device-width, initial-scale=1.0">) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (    <title>Arena Estelar</title>) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    <style>) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (    body {) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (        margin: 0;) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (        background-color: #0F172A;) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (        display: flex;) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (        justify-content: center;) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (        align-items: center;) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (        min-height: 100vh;) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (    </style>) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (</head>) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (<body>) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (   ) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (   ) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (    <script src="game.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (</body>) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (</html>) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm () Tj
+/F2 13 Tf 1 0 0 1 40 464 Tm (JavaScript) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (class RondaScene extends Phaser.Scene {) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (    constructor\(\) {) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (        super\({ key: "RondaScene" }\);) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (    preload\(\) {) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (        this.load.setBaseURL\("https://labs.phaser.io"\);) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (        this.load.image\("fundo", "assets/skies/space3.png"\);) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (        this.load.image\("ovni", "assets/sprites/ufo.png"\);) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (        this.load.spritesheet\("heroi", "assets/sprites/dude.png", {) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (            frameWidth: 32,) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (            frameHeight: 48) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (        }\);) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (    create\(\) {) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (        this.add.image \(400, 250, "fundo"\);) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (        this.heroi = this.add.sprite \(400, 300, "heroi", 4\);) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (        this.heroi.setDepth\(10\);) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (        this.ovniGrande = this.add.sprite \(600, 150, "ovni"\); ) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (        this.ovniGrande.setScale\(1.5\);) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (        this.ovniGrande.setAngle\(-20\);) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (    update\(\) {}) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (const config = {) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (    type: Phaser.AUTO,) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 750 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (    width: 800,) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (    height: 500,) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (    backgroundColor: "#1E293B",) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (    scene: RondaScene,) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (    physics: {) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (        default: "arcade",) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (        arcade: {) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (            gravity: { y: 0 },) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (            debug: true) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (};) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (const game = new Phaser.Game\(config\);) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm () Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000216 00000 n 
+0000000318 00000 n 
+0000003627 00000 n 
+0000003763 00000 n 
+0000004563 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+4699
+%%EOF

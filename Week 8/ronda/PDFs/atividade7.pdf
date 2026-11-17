@@ -1,0 +1,226 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 3406 >>
+stream
+BT
+/F2 13 Tf 1 0 0 1 40 802 Tm (HTML) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (<!DOCTYPE html>) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (<html lang="pt">) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (<head>) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (    <meta charset="UTF-8">) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (    <meta name="viewport" content="width=device-width, initial-scale=1.0">) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (    <title>Arena Estelar</title>) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    <style>) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (    body {) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (        margin: 0;) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (        background-color: #0F172A;) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (        display: flex;) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (        justify-content: center;) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (        align-items: center;) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (        min-height: 100vh;) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (    </style>) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (</head>) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (<body>) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (   ) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (   ) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (    <script src="game.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (</body>) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (</html>) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm () Tj
+/F2 13 Tf 1 0 0 1 40 464 Tm (JavaScript) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (class Heroi extends Phaser.Physics.Arcade.Sprite {) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (    constructor\(scene, x, y\) {) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (        super\(scene, x, y, "heroi", 4\);) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (        scene.add.existing\(this\);) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (        scene.physics.add.existing\(this\);) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (        this.setCollideWorldBounds\(true\);) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (        this.setDepth\(10\);) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (        this.velocidade = 200;) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (        this.direcao = "direita";) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (    mover\(cursors, teclas\) {) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (        this.setVelocity\(0\);) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (        if \(cursors.left.isDown || teclas.A.isDown\) {) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (            this.setVelocityX\(-this.velocidade\);) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (        } else if \(cursors.right.isDown || teclas.D.isDown\) {) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (            this.setVelocityX\(this.velocidade\);) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (        if \(cursors.up.isDown || teclas.W.isDown\) {) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (            this.setVelocityY\(-this.velocidade\);) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (        } else if \(cursors.down.isDown || teclas.S.isDown\) {) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (            this.setVelocityY\(this.velocidade\);) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (    animar\(\) {) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (        const velocidade = this.body.velocity;) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (        if \(velocidade.x < 0\) {) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 3555 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (            this.direcao = "esquerda";) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (        } else if \(velocidade.x > 0\) {) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (            this.direcao = "direita";) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (        if \(velocidade.x !== 0 || velocidade.y !== 0\) {) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (            this.anims.play\(this.direcao, true\);) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (        } else {) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (            this.anims.play\("parado", true\);) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (class RondaScene extends Phaser.Scene {) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (    constructor\(\) {) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (        super\({ key: "RondaScene" }\);) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (    preload\(\) {) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (        this.load.setBaseURL\("https://labs.phaser.io"\);) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (        this.load.image\("fundo", "assets/skies/space3.png"\);) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (        this.load.image\("ovni", "assets/sprites/ufo.png"\);) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (        this.load.spritesheet\("heroi", "assets/sprites/dude.png", {) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (            frameWidth: 32,) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (            frameHeight: 48) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (        }\);) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (    create\(\) {) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (        this.add.image \(400, 250, "fundo"\);) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (        if \(!this.anims.exists\("esquerda"\)\) {) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (            this.anims.create\({) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (                key: "esquerda",) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (                frames: this.anims.generateFrameNumbers\("heroi", { start: 0, end: 3 }\),) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (                frameRate: 10,) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (                repeat: -1) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (            }\);) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (            this.anims.create\({) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (                key: "direita",) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (                frames: this.anims.generateFrameNumbers\("heroi", { start: 5, end: 8 }\),) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (                frameRate: 10,) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (                repeat: -1) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (            }\);) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (            this.anims.create\({) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (                key: "parado",) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (                frames: [{ key: "heroi", frame: 4 }]) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (            }\);) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (        this.heroi = new Heroi\(this, 400, 300\);) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (        this.ovniGrande = this.add.sprite \(600, 150, "ovni"\); ) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (        this.ovniGrande.setScale\(1.5\);) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (        this.ovniGrande.setAngle\(-20\);) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm () Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 3009 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (        this.alt = this.scale.height;) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (        this.larg = this.scale.width;) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (        this.ovni1 = this.add.sprite \(60, 60, "ovni"\);) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (        this.ovni2 = this.add.sprite \(this.larg - 60, 60, "ovni"\);) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (        this.ovni3 = this.add.sprite \(60, this.alt - 60, "ovni"\);) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (        this.ovni4 = this.add.sprite \(this.larg - 60, this.alt - 60, "ovni"\);) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (        this.add.text \(10, this.alt - 10, "RONDA ESPACIAL", {) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (            fontSize: "20px",) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (            fontFamily: "Arial",) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (            fontStyle : "bold",) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (            color : "#FBBF24") Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (        }\).setOrigin\(0, 1\);) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (        this.ovnis = [this.ovni1, this.ovni2, this.ovni3, this.ovni4];) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (        this.cursors = this.input.keyboard.createCursorKeys\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (        this.teclas = this.input.keyboard.addKeys\("W,A,S,D"\);) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (        this.velocidadeOvni = 120;) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (    update\(time, delta\) {) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (        this.heroi.mover\(this.cursors, this.teclas\);) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (        this.heroi.animar\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (        const s = delta / 1000;) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (        this.ovniGrande.x += this.velocidadeOvni *s;) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (        this.ovniGrande.setAngle\(90\);) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (        if\(this.ovniGrande.x > this.larg + 60\){) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (            this.ovniGrande.x = -60) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (const config = {) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (    tpye : Phaser.AUTO,) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (    width : 800,) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (    height : 500,) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (    backgroundColor : "#ffff",) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (    scene : [RondaScene],) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (    physics: { default: "arcade", ) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (        arcade: { gravity: { y: 0 }, ) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (        debug: true } }) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (const game = new Phaser.Game\(config\);) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm () Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000128 00000 n 
+0000000223 00000 n 
+0000000325 00000 n 
+0000003782 00000 n 
+0000003918 00000 n 
+0000007524 00000 n 
+0000007660 00000 n 
+0000010720 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+10857
+%%EOF

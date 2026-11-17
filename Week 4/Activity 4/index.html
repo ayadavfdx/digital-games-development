@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+</head>
+<body>
+    <script>
+
+        // a91403
+        // Fernando Davila
+
+        // Object
+        let jogador = {
+        nome: "Aria",
+        hp: 100,
+        ataque: 15,
+        nivel: 3,
+        vivo: true
+    };
+    
+    // Variabels
+    var nivel = jogador.nivel;
+    jogador.hp -= 30;
+    var ganhaNivel = jogador.nivel += 1;
+    let prop = "ataque";
+
+    console.log(
+        jogador.nome + " -- " + "nivel " + nivel,
+        "\nHP: " + jogador.hp + " | " + "Nivel: " + ganhaNivel,
+        "\nAtaque = " + jogador[prop]
+    );
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 9</title>
+  </head>
+  <body>
+    <script>
+      // a91403
+      // Fernando Davila
+
+      let inimigos = [
+        { nome: "Goblin", hp: 30 },
+        { nome: "Troll", hp: 0 },
+        { nome: "Dragão", hp: 200 },
+        { nome: "Orc", hp: 45 },
+      ];
+
+      function contarVivos(lista){
+        var hp = [];
+
+        for(let i = 0; i < lista.length; i++){
+            if(lista[i].hp > 0){
+                hp.push(lista[i]);
+            }
+        }
+        return hp.length;
+      }
+
+      function ataqueEmArea(lista, dano){
+        var hp = []
+        for(let i = 0; i < lista.length; i++){
+            if(lista[i].hp - dano <= 0){
+                lista[i].hp = 0;
+                lista[i].hp -= dano * 0;
+                hp.push(lista[i]);
+            }else{
+                lista[i].hp -= dano;
+                hp.push(lista[i]);
+            }
+        } 
+        return hp;
+      }
+
+      function mostrarInimigos(lista){
+        for(let i = 0; i < lista.length; i++){
+            console.log(lista[i].nome, lista[i].hp);
+        }
+      }
+        console.log("Vivos:",contarVivos(inimigos));
+        ataqueEmArea(inimigos, 40);
+        mostrarInimigos(inimigos);
+        console.log("Vivos:",contarVivos(inimigos));
+        
+    </script>
+  </body>
+</html>

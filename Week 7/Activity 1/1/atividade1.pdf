@@ -1,0 +1,77 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 2029 >>
+stream
+BT
+/F2 13 Tf 1 0 0 1 40 802 Tm (HTML) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (<!DOCTYPE html>) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (<html lang="pt">) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (<head>) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (    <meta charset="UTF-8">) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (    <meta name="viewport" content="width=device-width, initial-scale=1.0">) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (    <title>Arena Estelar</title>) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    <style>) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (    body {) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (        margin: 0;) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (        background-color: #0F172A;) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (        display: flex;) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (        justify-content: center;) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (        align-items: center;) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (        min-height: 100vh;) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (    </style>) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (</head>) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (<body>) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (    ) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (0/dist/phaser.min.js">) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (    </script>) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (    ) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (    <script src="game.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (</body>) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (</html>) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm () Tj
+/F2 13 Tf 1 0 0 1 40 425 Tm (JavaScript) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (const config = {) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (    type : Phaser.AUTO,) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (    width : 800,) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (    height : 500,) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (    backgroundColor: "#1E293B",) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (    scene : []) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (const jogo = new Phaser.Game\(config\);) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm () Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000210 00000 n 
+0000000312 00000 n 
+0000002392 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2528
+%%EOF

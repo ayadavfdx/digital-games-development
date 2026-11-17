@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10</title>
+</head>
+<body>
+    <script>
+        // a91403
+        // Fernando Davila
+
+        let missoes = [
+        { titulo: "Salvar a aldeia", recompensa: 100, concluida: true },
+        { titulo: "Encontrar o mapa", recompensa: 50, concluida: false },
+        { titulo: "Derrotar o Troll", recompensa: 200, concluida: false },
+        { titulo: "Entregar a carta", recompensa: 30, concluida: true }
+        ];
+
+        function totalRecompensas(lista){
+            var total = 0;
+            for(let i = 0; i < lista.length; i++){
+                if(lista[i].concluida){
+                    total += lista[i].recompensa;
+                }
+            }
+            return total;
+        }
+
+        function missoesPendentes(lista){
+            var pendentes = [];
+            for(let i = 0; i < lista.length; i++){
+                if(!lista[i].concluida){
+                    pendentes.push(lista[i]);
+                }
+            }
+            return pendentes;
+        }
+
+        function concluirMissao(lista, titulo){
+            for(let i = 0; i < lista.length; i++){
+                if(lista[i].titulo === titulo){
+                    lista[i].concluida = true;
+                    return lista[i].concluida;
+                }
+            }
+            return false;
+        }
+        console.log("Moedas:",totalRecompensas(missoes));
+
+        for(let i = 0; i < missoesPendentes(missoes).length; i++){
+            console.log("Pendente:",missoesPendentes(missoes)[i].titulo);
+        }
+
+        console.log(concluirMissao(missoes, "Derrotar o Troll"));
+        console.log(concluirMissao(missoes, "Voar"));
+        console.log("Moedas:",totalRecompensas(missoes));
+        for(let i = 0; i < missoesPendentes(missoes).length; i++){
+            console.log("Pendente:",missoesPendentes(missoes).length);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+</head>
+<body>
+    <script>
+        // a91403
+        // Fernando Davila
+
+        let heroi = { nome: "Bruno", hp: 60, hpMax: 100, vivo: true };
+
+        function curar(personagem, quantidade){
+            var hpMax = 100;
+            personagem.hp += quantidade;
+
+            if(personagem.hp >= hpMax){
+                personagem.hp = hpMax;
+            }else{
+                return personagem.hp;
+            }
+        }
+
+        function receberDano(personagem, dano){
+            personagem.hp = personagem.hp - dano;
+            
+            if(personagem.hp <= 0){
+                personagem.hp = 0;
+                personagem.vivo = false;
+    }
+}
+    curar(heroi, 25);
+    console.log(heroi.nome , heroi.hp, heroi.vivo);
+    curar(heroi, 50)
+    console.log(heroi.nome , heroi.hp, heroi.vivo);
+    receberDano(heroi, 120)
+    console.log(heroi.nome , heroi.hp, heroi.vivo);
+    
+
+    </script>
+</body>
+</html>

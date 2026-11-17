@@ -1,0 +1,250 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 3499 >>
+stream
+BT
+/F2 13 Tf 1 0 0 1 40 802 Tm (HTML) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (<!DOCTYPE html>) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (<html lang="pt">) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (<head>) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (  <meta charset="UTF-8">) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (  <title>Chuva de Estrelas</title>) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (  <style>) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    body {) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (      margin: 0;                  /* tira a margem de 8px que o browser põe */) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (      background: #020617;        /* cor à volta do jogo \(qualquer uma serve\) */) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (      display: flex;              /* o body passa a ser um contentor flexbox */) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (      justify-content: center;    /* centra o jogo na horizontal */) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (      align-items: center;        /* centra o jogo na vertical */) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (      height: 100vh;              /* o body ocupa a altura toda da janela */) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (  </style>) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (</head>) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (<body>) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (  <!-- 1.º o Phaser \(CDN\), 2.º o nosso jogo -->) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (  <script src="game.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (</body>) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (</html>) Tj
+/F2 13 Tf 1 0 0 1 40 477 Tm (JavaScript) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (const ALTURA = 500;) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (const LARGURA = 800;) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (const ESTILO = {) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (    fontSize : "22px",) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (    fontStyle: "Arial",) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (    color : "#ffff") Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (};) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (// Desenha as texturas do jogo \(não são precisas imagens\)) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (function criarTexturas\(scene\) {) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (    if \(scene.textures.exists\("jogador"\)\) {) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (        return;                                   // já foram criadas) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (    const g = scene.add.graphics\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (    g.fillStyle\(0x22C55E\);) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (    g.fillRoundedRect\(0, 0, 60, 20, 6\);) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (    g.generateTexture\("jogador", 60, 20\);) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (    g.clear\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (    g.fillStyle\(0xFBBF24\);) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (    g.fillTriangle\(10, 0, 20, 10, 10, 20\);) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (    g.fillTriangle\(10, 0, 0, 10, 10, 20\);) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (    g.generateTexture\("estrela", 20, 20\);) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (    g.clear\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (    g.fillStyle\(0xEF4444\);) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (    g.fillCircle\(12, 12, 12\);) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (    g.generateTexture\("meteoro", 24, 24\);) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (    g.destroy\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (}) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 3838 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (class JogoScene extends Phaser.Scene{) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (    constructor\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (        super\({ key : "JogoScene" }\)) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (    create\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (        criarTexturas\(this\);) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (        this.velocidadeQueda = 150;) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (        this.invulneravel = false;) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (        this.jogador = this.physics.add.sprite\(LARGURA / 2, ALTURA - 30, "jogador"\);) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (        this.jogador.setCollideWorldBounds\(true\);) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (        this.velocidade = 320;) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (        this.cursors = this.input.keyboard.createCursorKeys\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (        this.estrelas = this.physics.add.group\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (        this.meteoros = this.physics.add.group\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (        this.pontos = 0;) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (        this.vidas = 3;) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (        this.textoPontos = this.add.text \(20, 16, "Pontos: 0", ESTILO\);) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (        this.textoVidas = this.add.text \(LARGURA - 20, 16, "Vidas: 3", ESTILO\).setOrigin\(1, 0\);) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (        this.textoObjetos = this.add.text\(LARGURA / 2, 16, "", ESTILO\).setOrigin\(0.5, 0\);) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (        this.physics.add.overlap\() Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (            this.jogador, ) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (            this.estrelas,) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (            this.apanharEstrela,) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (            null,) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (            this\);) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (        this.physics.add.overlap\() Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (            this.jogador, ) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (            this.meteoros,) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (            this.tocarMeteoro,) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (            null,) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (            this\);) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (        ) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (        this.time.addEvent\({) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (            delay: 800,                 // milissegundos) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (            loop: true,                 // repete sempre) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (            callback: this.largarObjeto, // SEM parênteses) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (            callbackScope: this) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (        }\);) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (    update\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (        if \(this.cursors.left.isDown\) {) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (            this.jogador.setVelocityX\(-this.velocidade\);) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (        } else if \(this.cursors.right.isDown\) {) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (            this.jogador.setVelocityX\(this.velocidade\);) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (        } else {) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (            this.jogador.setVelocityX\(0\);) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (        for \(const grupo of [this.estrelas, this.meteoros]\) {) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (            for \(const objeto of [...grupo.getChildren\(\)]\) {) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (                if \(objeto.y > ALTURA + 30\) {) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (                    objeto.destroy\(\);) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 3307 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (                }) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (            }) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (        this.textoObjetos.setText\("Objetos: " + \(this.estrelas.getChildren\(\).length + this.mete) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (oros.getChildren\(\).length\)\);) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    apanharEstrela\(jogador, estrela\){) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (        estrela.destroy\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (        this.pontos += 10;) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (        this.textoPontos.setText\("Pontos: " + this.pontos\);) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (    tocarMeteoro\(jogador, meteoro\){) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (        if \(this.invulneravel\){) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (            return;) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (        meteoro.destroy\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (        this.vidas -= 1;) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (        this.textoVidas.setText\("Vidas: " + this.vidas\);) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (        this.invulneravel = true;) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (        this.jogador.setTint\(0xEF4444\);) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (        this.time.delayedCall\(1000, \(\) => {) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (    this.invulneravel = false;) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (    jogador.clearTint\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (}\);) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (    largarObjeto\(\) {) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (        const x = Phaser.Math.Between\(20, LARGURA - 20\);) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (        let objeto;) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (        if \(Phaser.Math.Between\(1, 100\) <= 30\) {) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (            objeto = this.meteoros.create\(x, -20, "meteoro"\);   // 30% das vezes) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (        } else {) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (            objeto = this.estrelas.create\(x, -20, "estrela"\);   // 70% das vezes) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (        objeto.setVelocityY\(this.velocidadeQueda\);) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (const config = {) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (    type : Phaser.AUTO,) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (    width : LARGURA,) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (    height : ALTURA,) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (    backgroundColor: "#0F172A",) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (    scene : [JogoScene],) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (    physics : {) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (        default : "arcade",) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (        arcade : {) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (            gravity : { y : 0 },) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (            debug : true) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm () Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 217 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (const jogo = new Phaser.Game\(config\);) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (// Porque o return termina a função antes de executar meteoro.destroy\(\)) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm () Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000135 00000 n 
+0000000230 00000 n 
+0000000332 00000 n 
+0000003882 00000 n 
+0000004018 00000 n 
+0000007907 00000 n 
+0000008043 00000 n 
+0000011401 00000 n 
+0000011538 00000 n 
+0000011806 00000 n 
+trailer
+<< /Size 13 /Root 1 0 R >>
+startxref
+11944
+%%EOF

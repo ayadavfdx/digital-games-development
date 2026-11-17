@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+</head>
+<body>
+    <script>
+    
+    // a91403
+    // Fernando Davila
+
+    let hotbar = ["Espada", "Arco", "Poção"];
+
+    function itemNoSlot(barra, slot){
+        var lista = barra;
+        var index = slot;
+
+        if(index >= lista.length){
+            return "Slot vazio";
+        }else{
+            return lista[index];
+        }
+    }
+    
+    function trocarItem(barra, slot, novoItem){
+        var array = barra;
+        var index = slot;
+        var novoitem = array[index];
+        
+        novoitem = novoItem;
+        console.log("Slot" + slot + ":" + itemNoSlot(barra, slot),
+        "-> " + novoItem
+        );
+    }
+
+    console.log(itemNoSlot(hotbar,0));
+    console.log(itemNoSlot(hotbar, 5));
+    trocarItem(hotbar, 1, "Machado");
+    console.log(hotbar.length);
+    </script>
+</body>
+</html>

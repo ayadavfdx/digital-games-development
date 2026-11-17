@@ -1,0 +1,183 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 3130 >>
+stream
+BT
+/F2 13 Tf 1 0 0 1 40 802 Tm (HTML) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (<!DOCTYPE html>) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (<html lang="pt">) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (<head>) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (  <meta charset="UTF-8">) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (  <title>Ficha Phaser</title>) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (  <style>) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    body {) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (      margin: 0;) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (      background: #0F172A;) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (      display: flex;) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (      justify-content: center;) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (      align-items: center;) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (      height: 100vh;) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (  </style>) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (</head>) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (<body>) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (  <!-- 1.º o Phaser \(CDN\), 2.º o nosso jogo -->) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (  <script src="game.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (</body>) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (</html>) Tj
+/F2 13 Tf 1 0 0 1 40 477 Tm (JavaScript) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (class CarroScene extends Phaser.Scene {) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (    constructor\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (        super\({key : "CarroScene"}\)) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (    create\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (    var graf = this.add.graphics\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (    graf.fillStyle\(0xEF4444\);) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (    graf.fillRoundedRect\(0, 0, 46, 26, 10\);) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (    graf.fillStyle\(0x111827\);) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (    graf.fillRoundedRect\(36, 4, 5, 18, 3\);) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (    graf.generateTexture\("carro", 46, 26\);) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (    graf.destroy\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (    this.carro = this.physics.add.sprite\(400, 250, "carro"\);) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (    this.carro.setCollideWorldBounds\(true\);) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (    this.velocidade = 0;) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (    this.cursors = this.input.keyboard.createCursorKeys\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (    this.velocidadeTxt = this.add.text\(20, 20, "Velocidade: 0 px/s", {) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (    fontFamily: "Arial",) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (    fontSize: "20px",) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (    color: "#FFFFFF") Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (        }\);) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (    update\(time, delta\){) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 3244 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (    var vx = delta / 1000;) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (    if\(this.cursors.up.isDown\){) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (        this.velocidade += 300 * vx;) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (    else if\(this.cursors.down.isDown\){) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (        this.velocidade -= 300 * vx;) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (    else {) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (        if\(this.velocidade > 0\){) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (            this.velocidade -= 200 * vx;) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (            this.velocidade = Math.max\(0, this.velocidade\);) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (        else if\(this.velocidade < 0\){) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (            this.velocidade += 200 * vx;) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (            this.velocidade = Math.min\(0, this.velocidade\);) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (    this.velocidade = Phaser.Math.Clamp\(this.velocidade, -150, 300\);) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (    if\(Math.abs\(this.velocidade\) > 10\){) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (        if\(this.cursors.left.isDown\){) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (            this.carro.setAngularVelocity\(-180\);) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (    else if\(this.cursors.right.isDown\){) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (        this.carro.setAngularVelocity\(180\);) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (    else {) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (        this.carro.setAngularVelocity\(0\);) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (    } else {) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (    this.carro.setAngularVelocity\(0\);) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (    this.physics.velocityFromRotation\() Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (    this.carro.rotation,) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (    this.velocidade,) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (    this.carro.body.velocity\);) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (    this.velocidadeTxt.setText\("Velocidade: " + Math.round\(this.velocidade\) + " px/s"\);) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (const config = {) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (    type: Phaser.AUTO,) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (    width: 800,) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (    height: 500,) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (    backgroundColor: "#1E293B",) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (    scene: [CarroScene],) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (    physics: {) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (        default: "arcade",) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (        arcade: {) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (            gravity: { y: 0 },) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 283 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (            debug: false) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (};) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (const jogo = new Phaser.Game\(config\);) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000128 00000 n 
+0000000223 00000 n 
+0000000325 00000 n 
+0000003506 00000 n 
+0000003642 00000 n 
+0000006937 00000 n 
+0000007073 00000 n 
+0000007406 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+7543
+%%EOF

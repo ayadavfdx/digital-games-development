@@ -1,0 +1,155 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 3372 >>
+stream
+BT
+/F2 13 Tf 1 0 0 1 40 802 Tm (HTML) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (<!DOCTYPE html>) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (<html lang="pt">) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (<head>) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (  <meta charset="UTF-8">) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (  <title>Ficha Phaser</title>) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (  <style>) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    body {) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (      margin: 0;) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (      background: #0F172A;) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (      display: flex;) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (      justify-content: center;) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (      align-items: center;) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (      height: 100vh;) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (  </style>) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (</head>) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (<body>) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (  <!-- 1.º o Phaser \(CDN\), 2.º o nosso jogo -->) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (  <script src="game.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (</body>) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (</html>) Tj
+/F2 13 Tf 1 0 0 1 40 477 Tm (JavaScript) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (const MUNDO_L = 3200;) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (class AralaxeScene extends Phaser.Scene {) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (    constructor\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (        super\({key : "AralaxeScene" }\)) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (    create\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (        this.cameras.main.setBounds\(0, 0, MUNDO_L, 500\);) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (        for\(let i = 0; i < 150; i++\){) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (            var x = Phaser.Math.Between\(0, 800 + 0.2 * \(MUNDO_L - 800\)\);) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (            var y = Phaser.Math.Between\(0, 500\);) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (            this.add.circle\(x, y, 1, 0x64748B\)) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (                .setScrollFactor\(0.2, 0\);) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (        for\(let i = 0; i < 100; i++\){) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (            var x = Phaser.Math.Between\(0, 800 + 0.5 * \(MUNDO_L - 800\)\);) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (            var y = Phaser.Math.Between\(0, 500\);) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (            this.add.circle\(x, y, 2, 0xCBD5E1\)) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (                .setScrollFactor\(0.5, 0\);) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (        for\(let i = 0; i < 40; i++\){) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (            var x = Phaser.Math.Between\(0, 800 + 1 * \(MUNDO_L - 800\)\);) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (            var y = Phaser.Math.Between\(0, 500\);) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (            this.add.circle\(x, y, 3, 0xFFFFFF\)) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (                .setScrollFactor\(1, 0\);) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 2690 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (        for\(let i = 0; i < 4; i++\){) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (            var x = 400 + i * 800;) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (            var y = 250;) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (            this.add.circle\(x, y, 40, 0xF97316\)) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (                .setScrollFactor\(1, 0\);) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (        this.cursors = this.input.keyboard.createCursorKeys\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (        this.cameraTxt = this.add.text\(20, 20, "Câmara: x = 0", {) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (            fontSize: "20px",) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (            fontFamily: "Arial",) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (            color: "#FFFFFF") Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (        }\).setScrollFactor\(0\);) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (    update\(time, delta\){) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (        var dt = delta / 1000;) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (        var velocidade = 300;) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (        if\(this.cursors.shift.isDown\){) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (            velocidade = 900;) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (        if\(this.cursors.right.isDown\){) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (            this.cameras.main.scrollX += velocidade * dt;) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (        if\(this.cursors.left.isDown\){) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (            this.cameras.main.scrollX -= velocidade * dt;) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (        this.cameraTxt.setText\("Câmara: x = " + Math.round\(this.cameras.main.scrollX\)\);) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (const config = {) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (    type : Phaser.AUTO,) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (    width : 800,) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (    height: 540,) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (    backgroundColor : "#1E293B",) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (    scene : [AralaxeScene]) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (const jogo = new Phaser.Game\(config\);) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000216 00000 n 
+0000000318 00000 n 
+0000003741 00000 n 
+0000003877 00000 n 
+0000006618 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+6754
+%%EOF

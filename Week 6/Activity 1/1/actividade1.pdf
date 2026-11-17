@@ -1,0 +1,81 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 2451 >>
+stream
+BT
+/F2 13 Tf 1 0 0 1 40 802 Tm (HTML) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (<!DOCTYPE html>) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (<html lang="pt">) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (<head>) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (  <meta charset="UTF-8">) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (  <title>Atividade Canvas</title>) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (  <style>) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    body { background: #0F172A; display: flex; justify-content: center;) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (           align-items: center; min-height: 100vh; margin: 0; }) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (    canvas { border: 2px solid #334155; border-radius: 8px; }) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (  </style>) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (</head>) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (<body>) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (  <canvas id="jogo" width="600" height="400"></canvas>) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (  <script src="actividade1.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (</body>) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (</html>) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm () Tj
+/F2 13 Tf 1 0 0 1 40 568 Tm (JavaScript) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (// a91403) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (// Fernando Davila) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (const canvas = document.getElementById\("jogo"\);) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (const ctx = canvas.getContext\("2d"\);) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (const W = canvas.width;) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (const H = canvas.height;) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (ctx.fillStyle = "#7ccaf7";) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (ctx.fillRect \(0, 0, W, H\);) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (ctx.fillStyle = "#aff786";) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (ctx.fillRect \(0, H-80, W, H\);) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (ctx.fillStyle = "#f1f363";) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (ctx.beginPath \(\);) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (ctx.arc\(W - 80, 60, 40, 0, Math.PI * 2\);) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (ctx.fill\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (ctx.fillStyle = "#f7c170";) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (ctx.fillRect \(100, H - 80 - 120, 150, 120\);) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (ctx.strokeRect\(120, H - 160, 30, 30\);) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (ctx.fillStyle = "#7a3605";) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (ctx.fillRect\(180, H - 80 - 60, 40, 60\);) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm () Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000210 00000 n 
+0000000312 00000 n 
+0000002815 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2951
+%%EOF

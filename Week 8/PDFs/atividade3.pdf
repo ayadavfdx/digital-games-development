@@ -1,0 +1,204 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 3221 >>
+stream
+BT
+/F2 13 Tf 1 0 0 1 40 802 Tm (HTML) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (<!DOCTYPE html>) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (<html lang="pt">) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (<head>) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (  <meta charset="UTF-8">) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (  <title>Ficha Phaser</title>) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (  <style>) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    body {) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (      margin: 0;) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (      background: #0F172A;) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (      display: flex;) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (      justify-content: center;) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (      align-items: center;) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (      height: 100vh;) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (  </style>) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (</head>) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (<body>) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (  <!-- 1.º o Phaser \(CDN\), 2.º o nosso jogo -->) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (  <script src="game.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (</body>) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (</html>) Tj
+/F2 13 Tf 1 0 0 1 40 477 Tm (JavaScript) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (const CEL = 64;) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (const COLS = 10;) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (const LINHAS = 7;) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (class RoboScene extends Phaser.Scene {) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (    constructor\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (        super\({ key : "RoboScene" }\)) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (    create \(\){) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (        const inicioX = \(800 - COLS * CEL\) / 2;) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (        const inicioY = 72;) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (        for\(let i = 0; i < LINHAS; i++\){) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (            for\(let j = 0; j < COLS; j++\){) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (                var x = inicioX + j * CEL + CEL / 2;) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (                var y = inicioY + i * CEL + CEL / 2;) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (                this.add.rectangle\(x, y, CEL, CEL\)) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (                    .setStrokeStyle\(3, 0xFFFFFF\);) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (            }) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (        this.linRobo = 0;) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (        this.colRobo = 0;) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (        var posicao = this.centroDe\(this.colRobo, this.linRobo\);) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (        this.robo = this.add.rectangle \() Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (            posicao.x, posicao.y, 48, 48, 0x11E63E\);) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (        this.cursors = this.input.keyboard.createCursorKeys\(\);) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 3472 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (        this.estrela = this.add.circle \(0, 0, 16, 0xFACC15\);) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (        this.moverEstrela \(\);) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (        this.movimentoTxt = this.add.text \(20, 20 ,"Movimientos: "\);) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (        this.estrelaTxt = this.add.text \(20, 38, "Estrelas: "\);) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (        this.mov = 0;) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (        this.estrelas = 0;) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (    centroDe\(col, lin\){) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (        var x = \(800 - COLS * CEL\) / 2 + col * CEL + CEL / 2;) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (        var y = 72 + lin * CEL + CEL / 2;) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (        return { x, y };) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (    moverEstrela\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (        this.estrelaCol = Phaser.Math.Between\(0, COLS - 1\);) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (        this.estrelaLin = Phaser.Math.Between\(0, LINHAS - 1\);) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (        if\(this.estrelaCol === this.colRobo && this.estrelaLin === this.linRobo\){) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (            this.estrelaCol = \(this.estrelaCol + 1\) % COLS;) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (        var posicao = this.centroDe\(this.estrelaCol, this.estrelaLin\);) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (        this.estrela.setPosition\(posicao.x, posicao.y\);) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (    update \(\){) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (    var colAnterior = this.colRobo;) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (    var linAnterior = this.linRobo;) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (    var movAnterior = this.mov;) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (    if\(Phaser.Input.Keyboard.JustDown\(this.cursors.right\)\){) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (        this.colRobo++;) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (        this.mov++;) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (    if\(Phaser.Input.Keyboard.JustDown\(this.cursors.left\)\){) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (        this.colRobo--;) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (        this.mov++;) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (    if\(Phaser.Input.Keyboard.JustDown\(this.cursors.up\)\){) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (        this.linRobo--;) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (        this.mov++;) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (    if\(Phaser.Input.Keyboard.JustDown\(this.cursors.down\)\){) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (        this.linRobo++;) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (        this.mov++;) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (    this.linRobo = Phaser.Math.Clamp\(this.linRobo, 0, LINHAS - 1\);) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (    this.colRobo = Phaser.Math.Clamp\(this.colRobo, 0, COLS -1\);) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm () Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 1562 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (    this.mov = movAnterior +) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (        Math.abs\(this.colRobo - colAnterior\) +) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (        Math.abs\(this.linRobo - linAnterior\);) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (    var posicao = this.centroDe\(this.colRobo, this.linRobo\);) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (    this.robo.setPosition\(posicao.x, posicao.y\);) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    if\(this.colRobo === this.estrelaCol && this.linRobo === this.estrelaLin\){) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (        this.estrelas ++;) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (        this.moverEstrela\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (    this.movimentoTxt.setText\("Movimentos: " + this.mov\);) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (    this.estrelaTxt.setText\("Estrelas: " + this.estrelas\);) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (const config = {) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (    type : Phaser.AUTO,) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (    width : 800,) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (    height: 540,) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (    backgroundColor : "#1E293B",) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (    scene : [RoboScene]) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (const jogo = new Phaser.Game\(config\);) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000128 00000 n 
+0000000223 00000 n 
+0000000325 00000 n 
+0000003597 00000 n 
+0000003733 00000 n 
+0000007256 00000 n 
+0000007392 00000 n 
+0000009005 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+9142
+%%EOF

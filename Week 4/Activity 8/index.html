@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8</title>
+</head>
+<body>
+    <script>
+        // a19403
+        // Fernando Davila
+
+        let danos = [12, 30, 7, 25, 18];
+
+        function danoTotal(lista){
+            var total = 0;
+            for(let i = 0; i < lista.length; i++){
+                total += lista[i];
+            }
+            return total;
+        } 
+
+        function maiorDano(lista){
+            var maior = lista[0];
+            for(let i = 0; i < lista.length; i++){
+                if(lista[i] > maior){
+                    maior = lista[i]
+                }
+            }
+            return maior;
+        }
+
+        function medioDano(lista){
+            return danoTotal(lista)/lista.length
+        }
+
+        console.log("Dano Total:",danoTotal(danos));
+        console.log("Dano Maior:",maiorDano(danos));
+        console.log("Dano Meio:",medioDano(danos));
+
+    </script>
+</body>
+</html>

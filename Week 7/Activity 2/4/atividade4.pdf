@@ -1,0 +1,138 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 3225 >>
+stream
+BT
+/F2 13 Tf 1 0 0 1 40 802 Tm (HTML) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (<!DOCTYPE html>) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (<html lang="pt">) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (<head>) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (  <meta charset="UTF-8">) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (  <title>Ficha Phaser</title>) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (  <style>) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    body {) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (      margin: 0;) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (      background: #0F172A;) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (      display: flex;) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (      justify-content: center;) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (      align-items: center;) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (      height: 100vh;) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (  </style>) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (</head>) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (<body>) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (  <!-- 1.º o Phaser \(CDN\), 2.º o nosso jogo -->) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (  <script src="game.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (</body>) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (</html>) Tj
+/F2 13 Tf 1 0 0 1 40 477 Tm (JavaScript) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (//a91403) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (class TabuleiroScene extends Phaser.Scene{) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (    constructor\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (        super\({ key : "TabuleiroScene" }\);) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (    create\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (        this.add.text \(400, 30, "TABULEIRO", {) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (            fontSize : "28px",) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (            color : "#FBBF24",) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (            fontStyle : "blond") Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (        }\).setOrigin\(0.5\)) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (        this.pecas = 0;) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (        for\(let i = 0; i < 8; i ++\){) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (            for\(let j = 0; j < 8; j ++\){) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (                if \(\(i + j\) % 2 === 1\) {) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (                    this.cor = 0x334155;) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (                } else {) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (                    this.cor = 0xF1F5F1;) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (                }) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (                this.tabuleiro = this.add.rectangle \() Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (                    225 + j *50, ) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (                    95 + i *50, ) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (                    50, ) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (                    50, ) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (                    this.cor\);) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (                ) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (                if \(\(i + j\) % 2 === 1 && i < 3\){) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 1736 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (                    this.peca = this.add.circle \() Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (                        225 + j *50, ) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (                        95 + i *50, ) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (                        18, ) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (                        0xEF4444\)) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (                    this.pecas++;) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (                }) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (            }) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (        this.add.text \(700, 270, "Peças: " + this.pecas, {) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (            fontSize : "28px",) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (            color : "#FBBF24",) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (            fontStyle : "blond") Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (        }\).setOrigin\(0.5\)) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (        this.add.rectangle\(400, 270, 400, 400\).setStrokeStyle\(4, 0xFBBF24\);) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (    update\(\){}) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (const config = {) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (    type : Phaser.AUTO,) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (    width : 800,) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (    height : 500,) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (    backgroundColor: "#1E293B",) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (    scene : [TabuleiroScene]) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (const jogo = new Phaser.Game\(config\);) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm () Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000216 00000 n 
+0000000318 00000 n 
+0000003594 00000 n 
+0000003730 00000 n 
+0000005517 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+5653
+%%EOF

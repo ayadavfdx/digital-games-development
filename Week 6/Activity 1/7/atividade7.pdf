@@ -1,0 +1,318 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 3142 >>
+stream
+BT
+/F2 13 Tf 1 0 0 1 40 802 Tm (HTML) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (<!DOCTYPE html>) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (<html lang="pt">) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (<head>) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (  <meta charset="UTF-8">) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (  <title>Atividade Canvas</title>) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (  <style>) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    body { background: #0F172A; display: flex; justify-content: center;) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (           align-items: center; min-height: 100vh; margin: 0; }) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (    canvas { border: 2px solid #334155; border-radius: 8px; }) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (  </style>) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (</head>) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (<body>) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (  <canvas id="jogo" width="600" height="400"></canvas>) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (  <script src="atividade7.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (</body>) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (</html>) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm () Tj
+/F2 13 Tf 1 0 0 1 40 555 Tm (JavaScript) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (// a91403) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (// Fernando Davila) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (// GDD - Dodge Master) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (// Dodge Master é um jogo de reflexos onde o jogador move um) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (// quadrado para evitar círculos que caem. O objetivo é sobreviver) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (// o máximo de tempo possível. O jogador perde quando um círculo) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (// toca no quadrado. O desafio aumenta porque os círculos caem) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (// cada vez mais rápido.) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (const canvas = document.getElementById\("jogo"\);) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (const ctx = canvas.getContext\("2d"\);) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (const W = canvas.width;) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (const H = canvas.height;) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (// Game variables) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (var jogador = {) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (    x: W / 2 - 20,) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (    y: H - 60,) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (    w: 40,) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (    h: 40,) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (    vel: 5) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (};) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (var teclas = {};) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (var inimigos = [];) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (var frames = 0;) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (var velQueda = 2;) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (var pontos = 0;) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (var gameOver = false;) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (// Restart game) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (function reiniciar\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (    jogador.x = W / 2 - jogador.w / 2;) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (    inimigos = [];) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (    frames = 0;) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (    velQueda = 2;) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 3168 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (    pontos = 0;) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (    gameOver = false;) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (    teclas = {};) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (// Keyboard controls) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (window.addEventListener\("keydown", function\(evento\){) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (    if\(evento.key === "ArrowLeft" || evento.key === "ArrowRight"\){) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (        evento.preventDefault\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (        teclas[evento.key] = true;) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (    if\(evento.key === "Enter"\){) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (        if\(gameOver === true && evento.repeat === false\){) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (            reiniciar\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (}\);) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (window.addEventListener\("keyup", function\(evento\){) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (    teclas[evento.key] = false;) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (}\);) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (window.addEventListener\("blur", function\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (    teclas = {};) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (}\);) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (// Create enemies) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (function criarInimigo\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (    var raio = 12 + Math.floor\(Math.random\(\) * 11\);) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (    var x = raio + Math.random\(\) * \(W - 2 * raio\);) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (    inimigos.push\({) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (        x: x,) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (        y: -raio,) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (        r: raio) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (    }\);) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (// Check collision) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (function colide\(circulo, quadrado\){) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (    var pontoX = circulo.x;) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (    var pontoY = circulo.y;) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (    if\(circulo.x < quadrado.x\){) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (        pontoX = quadrado.x;) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (    }else if\(circulo.x > quadrado.x + quadrado.w\){) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (        pontoX = quadrado.x + quadrado.w;) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (    if\(circulo.y < quadrado.y\){) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (        pontoY = quadrado.y;) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (    }else if\(circulo.y > quadrado.y + quadrado.h\){) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (        pontoY = quadrado.y + quadrado.h;) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (    var distanciaX = circulo.x - pontoX;) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 3043 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (    var distanciaY = circulo.y - pontoY;) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (    var distancia = distanciaX * distanciaX + distanciaY * distanciaY;) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (    var raio = circulo.r * circulo.r;) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (    if\(distancia <= raio\){) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (        return true;) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    }else{) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (        return false;) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (// Update game) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (function atualizar\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (    if\(gameOver === true\){) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (        return;) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (    // Player movement) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (    if\(teclas.ArrowLeft\){) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (        jogador.x = jogador.x - jogador.vel;) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (    if\(teclas.ArrowRight\){) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (        jogador.x = jogador.x + jogador.vel;) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (    if\(jogador.x < 0\){) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (        jogador.x = 0;) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (    }else if\(jogador.x + jogador.w > W\){) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (        jogador.x = W - jogador.w;) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (    frames++;) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (    // Enemy spawn and speed) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (    if\(frames % 40 === 0\){) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (        criarInimigo\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (    if\(frames % 300 === 0\){) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (        velQueda = velQueda + 0.5;) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (    // Update enemies) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (    for\(var i = inimigos.length - 1; i >= 0; i--\){) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (        inimigos[i].y = inimigos[i].y + velQueda;) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (        if\(colide\(inimigos[i], jogador\)\){) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (            gameOver = true;) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (            break;) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (        if\(inimigos[i].y - inimigos[i].r > H\){) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (            inimigos.splice\(i, 1\);) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (            pontos++;) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (    }) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 3223 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (// Draw game) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (function desenhar\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (    ctx.clearRect\(0, 0, W, H\);) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (    ctx.fillStyle = "#111827";) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (    ctx.fillRect\(0, 0, W, H\);) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (    // Player) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (    ctx.fillStyle = "#F472B6";) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (    ctx.fillRect\(jogador.x, jogador.y, jogador.w, jogador.h\);) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (    // Enemies) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (    ctx.fillStyle = "#8B5CF6";) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (    for\(var i = 0; i < inimigos.length; i++\){) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (        ctx.beginPath\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (        ctx.arc\(inimigos[i].x, inimigos[i].y, inimigos[i].r, 0, 2 * Math.PI\);) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (        ctx.fill\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (    // Score and speed) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (    ctx.fillStyle = "white";) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (    ctx.font = "18px Arial";) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (    ctx.textAlign = "left";) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (    ctx.fillText\("Evitados: " + pontos, 25, 35\);) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (    ctx.textAlign = "right";) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (    ctx.fillText\("Velocidade: " + velQueda.toFixed\(1\), W - 25, 35\);) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (    // Game over screen) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (    if\(gameOver === true\){) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (        ctx.fillStyle = "#0000";) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (        ctx.fillRect\(0, 0, W, H\);) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (        ctx.fillStyle = "white";) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (        ctx.textAlign = "center";) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (        ctx.font = "80px Arial";) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (        ctx.fillText\("GAME OVER", W / 2, H / 2 - 25\);) Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (        ctx.font = "22px Arial";) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm (        ctx.fillText\("Evitados: " + pontos, W / 2, H / 2 + 15\);) Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (        ctx.font = "18px Arial";) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (        ctx.fillText\("Enter para reiniciar", W / 2, H / 2 + 55\);) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (// Main game loop) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (function gameLoop\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (    atualizar\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (    desenhar\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (    requestAnimationFrame\(gameLoop\);) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (gameLoop\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm () Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 38 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm () Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000142 00000 n 
+0000000237 00000 n 
+0000000339 00000 n 
+0000003533 00000 n 
+0000003669 00000 n 
+0000006889 00000 n 
+0000007025 00000 n 
+0000010120 00000 n 
+0000010257 00000 n 
+0000013533 00000 n 
+0000013671 00000 n 
+0000013760 00000 n 
+trailer
+<< /Size 15 /Root 1 0 R >>
+startxref
+13898
+%%EOF

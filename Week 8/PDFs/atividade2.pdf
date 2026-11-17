@@ -1,0 +1,135 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 3314 >>
+stream
+BT
+/F2 13 Tf 1 0 0 1 40 802 Tm (HTML) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (<!DOCTYPE html>) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (<html lang="pt">) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (<head>) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (  <meta charset="UTF-8">) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (  <title>Ficha Phaser</title>) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (  <style>) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    body {) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (      margin: 0;) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (      background: #0F172A;) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (      display: flex;) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (      justify-content: center;) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (      align-items: center;) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (      height: 100vh;) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (  </style>) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (</head>) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (<body>) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (  <!-- 1.º o Phaser \(CDN\), 2.º o nosso jogo -->) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (  <script src="game.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (</body>) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (</html>) Tj
+/F2 13 Tf 1 0 0 1 40 477 Tm (JavaScript) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (class Relogio extends Phaser.Scene {) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (    constructor\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (        super\({ key : "Relogio" }\)) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (    create \(\){) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (        this.add.circle \(400, 250, 180, 0x1E223B\).setStrokeStyle\(2, 0xFFFFFF\);) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (        for\(let i = 0; i < 12; i++\){) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (            var angulo = Phaser.Math.DegToRad\(i * 30\);) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (            var x = 400 + Math.sin\(angulo\) * 160;) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (            var y = 250 - Math.cos\(angulo\) * 160;) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (            this.add.circle\(x, y, 5, 0xFAEC15\);) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (        this.ponteiroMin = this.add.rectangle \() Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (            400, 250, 8, 130, 0xFFFFFF\).setOrigin\(0.5,1\);) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm (        this.ponteiroSeg = this.add.rectangle \() Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (            400, 250, 4, 160, 0xF94C15\).setOrigin\(0.5,1\);) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (        this.tempoTexto = this.add.text \(20, 20, "Tempo: ", {) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (            fontSize : "18px",) Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (            fontFamily : "Arial",) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (            color : "#ffff") Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (        }\)) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (        this.segundos = 0;) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (        this.cursors = this.input.keyboard.createCursorKeys\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (    }) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 1643 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (    update \(time, delta\){) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (        if\(this.cursors.space.isDown\){) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (            this.segundos += \(delta / 1000\) *60;) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (        }else{) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (            this.segundos += delta / 1000;) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (        var anguloSeg = this.segundos * 6;) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (        var anguloMin = this.segundos * 0.1;) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (        this.ponteiroSeg.setRotation\(Phaser.Math.DegToRad\(anguloSeg\)\);) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (        this.ponteiroMin.setRotation\(Phaser.Math.DegToRad\(anguloMin\)\);) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (        var mostrarSegundos = Math.floor\(this.segundos\)) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (        this.tempoTexto.setText \("Tempo: " + mostrarSegundos + "s"\);) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (const config = {) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (    type : Phaser.AUTO,) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (    width : 800,) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (    height: 500,) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (    backgroundColor : "#1E293B",) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (    scene : [Relogio]) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (const jogo = new Phaser.Game\(config\);) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000216 00000 n 
+0000000318 00000 n 
+0000003683 00000 n 
+0000003819 00000 n 
+0000005513 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+5649
+%%EOF

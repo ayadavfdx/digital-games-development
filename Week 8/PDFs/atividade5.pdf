@@ -1,0 +1,212 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 3146 >>
+stream
+BT
+/F2 13 Tf 1 0 0 1 40 802 Tm (HTML) Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (<!DOCTYPE html>) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (<html lang="pt">) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (<head>) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (  <meta charset="UTF-8">) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (  <title>Ficha Phaser</title>) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (  <style>) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (    body {) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (      margin: 0;) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (      background: #0F172A;) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (      display: flex;) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (      justify-content: center;) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (      align-items: center;) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (      height: 100vh;) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (  </style>) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (</head>) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (<body>) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (  <!-- 1.º o Phaser \(CDN\), 2.º o nosso jogo -->) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (  <script src="game.js"></script>) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (</body>) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (</html>) Tj
+/F2 13 Tf 1 0 0 1 40 477 Tm (JavaScript) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (class Jogador extends Phaser.Physics.Arcade.Sprite {) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (    constructor\(scene, x, y, textura, teclas\){) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (        super\(scene, x, y, textura\);) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (        scene.add.existing\(this\);) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (        scene.physics.add.existing\(this\);) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (        this.setCollideWorldBounds\(true\);) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (        this.teclas = teclas;) Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (        this.velocidade = 220;) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (    mover\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (        this.setVelocity\(0, 0\);) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (        if\(this.teclas.cima.isDown\){) Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (            this.setVelocityY\(-this.velocidade\);) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (        if\(this.teclas.baixo.isDown\){) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (            this.setVelocityY\(this.velocidade\);) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (        if\(this.teclas.esq.isDown\){) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (            this.setVelocityX\(-this.velocidade\);) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (        if\(this.teclas.dir.isDown\){) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (            this.setVelocityX\(this.velocidade\);) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm (        }) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 3246 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (        this.body.velocity.normalize\(\).scale\(this.velocidade\);) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (class JogadorScene extends Phaser.Scene {) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm (    constructor\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (        super\({key : "JogadorScene"}\)) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (    create \(\){) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (        var grafico = this.add.graphics\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (        grafico.fillStyle\(0x3B82F6\);) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (        grafico.fillCircle\(20, 20, 20\);) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (        grafico.generateTexture\("azul", 40, 40\);) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm (        grafico.clear\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (        grafico.fillStyle\(0xF97316\);) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (        grafico.fillCircle\(20, 20, 20\);) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (        grafico.generateTexture\("laranja", 40, 40\);) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (        grafico.destroy\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (        this.teclasAzul = this.input.keyboard.addKeys\({) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (            cima: "W",) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (            baixo: "S",) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (            esq: "A",) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (            dir: "D") Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (        }\);) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm (        this.teclasLaranja = this.input.keyboard.addKeys\({) Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (            cima: "UP",) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm (            baixo: "DOWN",) Tj
+/F1 9 Tf 1 0 0 1 40 347 Tm (            esq: "LEFT",) Tj
+/F1 9 Tf 1 0 0 1 40 334 Tm (            dir: "RIGHT") Tj
+/F1 9 Tf 1 0 0 1 40 321 Tm (        }\);) Tj
+/F1 9 Tf 1 0 0 1 40 308 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 295 Tm (        this.jogador1 = new Jogador\() Tj
+/F1 9 Tf 1 0 0 1 40 282 Tm (            this, 200, 250, "azul", this.teclasAzul) Tj
+/F1 9 Tf 1 0 0 1 40 269 Tm (        \);) Tj
+/F1 9 Tf 1 0 0 1 40 256 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 243 Tm (        this.jogador2 = new Jogador\() Tj
+/F1 9 Tf 1 0 0 1 40 230 Tm (            this, 600, 250, "laranja", this.teclasLaranja) Tj
+/F1 9 Tf 1 0 0 1 40 217 Tm (        \);) Tj
+/F1 9 Tf 1 0 0 1 40 204 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 191 Tm (        this.distanciaTxt = this.add.text\(20, 20, "Distancia:", {) Tj
+/F1 9 Tf 1 0 0 1 40 178 Tm (            fontSize: "20px",) Tj
+/F1 9 Tf 1 0 0 1 40 165 Tm (            fontFamily: "Arial",) Tj
+/F1 9 Tf 1 0 0 1 40 152 Tm (            color: "#FFFFFF") Tj
+/F1 9 Tf 1 0 0 1 40 139 Tm (        }\);) Tj
+/F1 9 Tf 1 0 0 1 40 126 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 113 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 100 Tm (    update\(\){) Tj
+/F1 9 Tf 1 0 0 1 40 87 Tm (        this.jogador1.mover\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 74 Tm (        this.jogador2.mover\(\);) Tj
+/F1 9 Tf 1 0 0 1 40 61 Tm () Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 1942 >>
+stream
+BT
+/F1 9 Tf 1 0 0 1 40 802 Tm (        var distancia = Phaser.Math.Distance.Between\() Tj
+/F1 9 Tf 1 0 0 1 40 789 Tm (            this.jogador1.x,) Tj
+/F1 9 Tf 1 0 0 1 40 776 Tm (            this.jogador1.y,) Tj
+/F1 9 Tf 1 0 0 1 40 763 Tm (            this.jogador2.x,) Tj
+/F1 9 Tf 1 0 0 1 40 750 Tm (            this.jogador2.y) Tj
+/F1 9 Tf 1 0 0 1 40 737 Tm (        \);) Tj
+/F1 9 Tf 1 0 0 1 40 724 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 711 Tm (        if\(distancia < 60\){) Tj
+/F1 9 Tf 1 0 0 1 40 698 Tm (            this.distanciaTxt.setText\("Apanhado!"\);) Tj
+/F1 9 Tf 1 0 0 1 40 685 Tm (            this.distanciaTxt.setColor\("#c90808"\);) Tj
+/F1 9 Tf 1 0 0 1 40 672 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 659 Tm (        else {) Tj
+/F1 9 Tf 1 0 0 1 40 646 Tm (            this.distanciaTxt.setText\("Distancia: " + Math.round\(distancia\) + " px"\);) Tj
+/F1 9 Tf 1 0 0 1 40 633 Tm (            this.distanciaTxt.setColor\("#FFFFFF"\);) Tj
+/F1 9 Tf 1 0 0 1 40 620 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 607 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 594 Tm (}) Tj
+/F1 9 Tf 1 0 0 1 40 581 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 568 Tm (const config = {) Tj
+/F1 9 Tf 1 0 0 1 40 555 Tm (    type: Phaser.AUTO,) Tj
+/F1 9 Tf 1 0 0 1 40 542 Tm (    width: 800,) Tj
+/F1 9 Tf 1 0 0 1 40 529 Tm (    height: 500,) Tj
+/F1 9 Tf 1 0 0 1 40 516 Tm (    backgroundColor: "#1E293B",) Tj
+/F1 9 Tf 1 0 0 1 40 503 Tm (    scene: [JogadorScene],) Tj
+/F1 9 Tf 1 0 0 1 40 490 Tm (    physics: {) Tj
+/F1 9 Tf 1 0 0 1 40 477 Tm (        default: "arcade",) Tj
+/F1 9 Tf 1 0 0 1 40 464 Tm (        arcade: {) Tj
+/F1 9 Tf 1 0 0 1 40 451 Tm (            gravity: { y: 0 },) Tj
+/F1 9 Tf 1 0 0 1 40 438 Tm (            debug: false) Tj
+/F1 9 Tf 1 0 0 1 40 425 Tm (        }) Tj
+/F1 9 Tf 1 0 0 1 40 412 Tm (    }) Tj
+/F1 9 Tf 1 0 0 1 40 399 Tm (};) Tj
+/F1 9 Tf 1 0 0 1 40 386 Tm () Tj
+/F1 9 Tf 1 0 0 1 40 373 Tm (const jogo = new Phaser.Game\(config\);) Tj
+/F1 9 Tf 1 0 0 1 40 360 Tm () Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000128 00000 n 
+0000000223 00000 n 
+0000000325 00000 n 
+0000003522 00000 n 
+0000003658 00000 n 
+0000006955 00000 n 
+0000007091 00000 n 
+0000009084 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+9221
+%%EOF
